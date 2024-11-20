@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskmgr</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="module" src="js/main.js"></script>
+    <script src="js/speakit.1.1.0.js"></script>
+</head>
+<body>
+    <header>
+        <img src="./images/menu.png">
+        <h1 class="logo">Taskmgr</h1>
+        <div class="menuLateral">
+            <button type="button" class="buttonMenu" id="nuevaTarea">Nueva tarea</button>
+            <button type="button" class="buttonMenu" id="modificar">Cambiar estado</button>
+            <button type="button" class="buttonMenu" id="configuracion">Configuración</button>
+        </div>
+    </header>
+    <main>
+        <div class="listaTareas"></div>
+    </main>
+    <dialog id="dialogNuevaTarea">
+        <div>
+            <h1>Nueva Tarea</h1>
+            <input type="text" id="tituloNuevaTarea" placeholder="Título">
+            <textarea id="descripcionNuevaTarea" placeholder="Descripción"></textarea>
+            <div class="botonesDialog">
+                <button type="button" id="crearTarea">Guardar</button>
+                <button type="button" value="cancelar" id="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="dialogModificar">
+        <div>
+            <h1>Modificar estado</h1>
+            <select id="selectEstado"></select>
+            <div class="botonesDialog">
+                <p>Finalizada</p>
+                <input type="checkbox" id="checkEstado">
+            </div>
+            <div class="botonesDialog">
+                <button type="button" id="modificarEstado">Guardar</button>
+                <button type="button" value="cancelar" id="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
+    <dialog id="dialogConfiguracion">
+        <div>
+            <h1>Configuración</h1>
+            <select id="selectVoice"></select>
+            <p>Velocidad de reproducción</p>
+            <input type="range" id="inputRange" min="0" max="2" value="1" step="0.1">
+            <div class="botonesDialog">
+                <button type="button" id="guardarConfiguracion">Guardar</button>
+                <button type="button" value="cancelar" id="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </dialog>
+</body>
+</html>
