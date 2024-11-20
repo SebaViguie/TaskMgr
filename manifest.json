@@ -7,7 +7,7 @@
     "background_color": "#141a24",
     "theme_color": "#141a24",
     "description": "PWA para administrar tareas",
-    "scope": "/TaskMgr/",
+    "scope": "/",
     "display": "standalone",
     "orientation": "portrait",
     "icons": [
